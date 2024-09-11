@@ -2,7 +2,7 @@
 #include<stack>
 using namespace std;
 int main(){
-    string exp="{{({})}}";
+    string exp="{{({})}";
     stack<char>s;
     for(int i=0;i<exp.length();i++){
        char ch=exp[i];
@@ -23,4 +23,11 @@ int main(){
             }
        }
     }
+    if (s.empty()) {
+        cout << "The expression is balanced." << endl;
+    } 
+    else {
+        cout << "The expression is not balanced." << endl;
+    }
+   
 }
